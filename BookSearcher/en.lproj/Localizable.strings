@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  BookSearcher
+
+  Created by user on 7/1/20.
+  Copyright © 2020 vel. All rights reserved.
+*/
+
+"search.book" = "Search Book";
+"new.releases" = "New releases";
+"results.for" = "Results for %@";
+"no.matches.for" = "No matches for %@";
+
+"title" = "Title";
+"subtitle" = "Subtitle";
+"publisher" = "Publisher";
+"language" = "Language";
+"pages" = "Pages";
+"rating" = "Rating";
+"desc" = "Description";
+"price" = "Price";
+"preview" = "Preview";
