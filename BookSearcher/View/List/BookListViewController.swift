@@ -159,6 +159,7 @@ extension BookListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BookItemTableViewCell.reuseIdentifier, for: indexPath) as! BookItemTableViewCell
+        guard !books.isEmpty else { return cell }
         
         let book = books[indexPath.row]
         
