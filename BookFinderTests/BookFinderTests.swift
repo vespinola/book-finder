@@ -1,6 +1,6 @@
 //
-//  BookSearcherTests.swift
-//  BookSearcherTests
+//  BookFinderTests.swift
+//  BookFinderTests
 //
 //  Created by user on 6/21/20.
 //  Copyright © 2020 vel. All rights reserved.
@@ -8,11 +8,11 @@
 
 import ReSwift
 import XCTest
-@testable import BookSearcher
+@testable import BookFinder
 
 struct EmptyAction: Action { }
 
-class BookSearcherTests: XCTestCase {
+class BookFinderTests: XCTestCase {
 
     func testGetBooks() {
         let action = BookListAction.getBooks("redux")
