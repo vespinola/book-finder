@@ -9,6 +9,6 @@
 import Foundation
 import ReSwift
 
-struct AppState: StateType, Equatable {
+struct AppState: StateType {
     var bookListState: BookListState = BookListState()
 }

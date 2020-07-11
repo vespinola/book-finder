@@ -9,7 +9,7 @@
 import Foundation
 import ReSwift
 
-struct BookListState: StateType, Equatable {
+struct BookListState: StateType {
     var searchRequestState: RequestState<SearchResponseModel> = .initial
     var searchState: SearchState = .ready
     var errorState: ErrorState = .none
@@ -18,8 +18,6 @@ struct BookListState: StateType, Equatable {
     var books: [BookModel] { pages.values }
     
     var bookDetailState: RequestState<BookDetailResponseModel> = .initial
-    
-    static func == (lhs: BookListState, rhs: BookListState) -> Bool { lhs.searchState == rhs.searchState }
 }
 
 enum RequestState<T: Codable> {

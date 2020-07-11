@@ -14,11 +14,6 @@ struct EmptyAction: Action { }
 
 class BookSearcherTests: XCTestCase {
 
-    func testInitialState() {
-        let state = mainReducer(action: EmptyAction(), state: nil)
-        XCTAssertEqual(state, AppState())
-    }
-    
     func testGetBooks() {
         let action = BookListAction.getBooks("redux")
         let state = mainReducer(action: action, state: nil)
@@ -43,7 +38,7 @@ class BookSearcherTests: XCTestCase {
 
         let state = mainReducer(action: action, state: nil)
 
-        guard case let .searching(search) = state.bookListState.search else {
+        guard case let .searching(search) = state.bookListState.searchState else {
             return XCTFail()
         }
 
@@ -55,7 +50,7 @@ class BookSearcherTests: XCTestCase {
 
         let state = mainReducer(action: action, state: nil)
 
-        guard case .cancelled = state.bookListState.search else {
+        guard case .cancelled = state.bookListState.searchState else {
             return XCTFail()
         }
     }
