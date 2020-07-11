@@ -17,9 +17,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE167EAE24A043FF00ECB6F7"
-               BuildableName = "BookSearcherTests.xctest"
-               BlueprintName = "BookSearcherTests"
-               ReferencedContainer = "container:BookSearcher.xcodeproj">
+               BuildableName = "BookFinderTests.xctest"
+               BlueprintName = "BookFinderTests"
+               ReferencedContainer = "container:BookFinder.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE167E9824A043FD00ECB6F7"
-               BuildableName = "BookSearcher.app"
-               BlueprintName = "BookSearcher"
-               ReferencedContainer = "container:BookSearcher.xcodeproj">
+               BuildableName = "BookFinder.app"
+               BlueprintName = "BookFinder"
+               ReferencedContainer = "container:BookFinder.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE167E9824A043FD00ECB6F7"
-            BuildableName = "BookSearcher.app"
-            BlueprintName = "BookSearcher"
-            ReferencedContainer = "container:BookSearcher.xcodeproj">
+            BuildableName = "BookFinder.app"
+            BlueprintName = "BookFinder"
+            ReferencedContainer = "container:BookFinder.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE167E9824A043FD00ECB6F7"
-            BuildableName = "BookSearcher.app"
-            BlueprintName = "BookSearcher"
-            ReferencedContainer = "container:BookSearcher.xcodeproj">
+            BuildableName = "BookFinder.app"
+            BlueprintName = "BookFinder"
+            ReferencedContainer = "container:BookFinder.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
