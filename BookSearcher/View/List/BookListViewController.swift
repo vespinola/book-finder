@@ -85,9 +85,9 @@ extension BookListViewController: StoreSubscriber {
     typealias StoreSubscriberStateType = BookListState
     
     func newState(state: BookListState) {
-        switch state.searchResponseState {
+        switch state.searchRequestState {
         case .initial:
-            switch state.error {
+            switch state.errorState {
             case .error(let message):
                 descriptionView.set(text: message)
                 tableView.reloadData()
@@ -114,14 +114,14 @@ extension BookListViewController: StoreSubscriber {
             descriptionView.set(text: message)
         }
         
-        switch state.selectedBook {
+        switch state.selectedBookState {
         case .selected(_):
             store.dispatch(getDetail)
         default:
             break
         }
         
-        switch state.bookDetailResponseState {
+        switch state.bookDetailState {
         case .loaded(let detail):
             performToDetail(for: detail)
             isLoading = false

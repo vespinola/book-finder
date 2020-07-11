@@ -10,16 +10,16 @@ import Foundation
 import ReSwift
 
 struct BookListState: StateType, Equatable {
-    var searchResponseState: RequestState<SearchResponseModel> = .initial
-    var search: SearchState = .ready
-    var error: SearchErrorState = .none
+    var searchRequestState: RequestState<SearchResponseModel> = .initial
+    var searchState: SearchState = .ready
+    var errorState: ErrorState = .none
     var pages = Pages<BookModel>()
-    var selectedBook: SelectionState<BookModel> = .unselected
+    var selectedBookState: SelectionState<BookModel> = .unselected
     var books: [BookModel] { pages.values }
     
-    var bookDetailResponseState: RequestState<BookDetailResponseModel> = .initial
+    var bookDetailState: RequestState<BookDetailResponseModel> = .initial
     
-    static func == (lhs: BookListState, rhs: BookListState) -> Bool { lhs.search == rhs.search }
+    static func == (lhs: BookListState, rhs: BookListState) -> Bool { lhs.searchState == rhs.searchState }
 }
 
 enum RequestState<T: Codable> {
@@ -48,7 +48,7 @@ enum SearchState: Equatable {
     case searching(String)
 }
 
-enum SearchErrorState {
+enum ErrorState {
     case none
     case error(String)
 }

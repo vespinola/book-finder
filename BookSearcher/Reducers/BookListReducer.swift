@@ -14,38 +14,38 @@ func bookListReducer(action: Action, state: BookListState?) -> BookListState {
     
     switch action as? BookListAction {
     case .clearSearch:
-        state.searchResponseState = .initial
-        state.search = .cancelled
-        state.error = .none
+        state.searchRequestState = .initial
+        state.searchState = .cancelled
+        state.errorState = .none
         state.pages = Pages<BookModel>()
-        state.selectedBook = .unselected
+        state.selectedBookState = .unselected
     case .getBooks(let query):
-        state.searchResponseState = .loading
-        state.search = .searching(query)
-        state.error = .none
+        state.searchRequestState = .loading
+        state.searchState = .searching(query)
+        state.errorState = .none
         state.pages = Pages<BookModel>()
-        state.selectedBook = .unselected
+        state.selectedBookState = .unselected
     case .set(let response):
-        state.searchResponseState = .loaded(response)
+        state.searchRequestState = .loaded(response)
         state.pages.add(totalPages: Int(response.total!)!, values: response.books ?? [])
-        state.error = .none
-        state.selectedBook = .unselected
+        state.errorState = .none
+        state.selectedBookState = .unselected
     case .showError(let message):
-        state.searchResponseState = .initial
-        state.search = .cancelled
-        state.error = .error(message)
+        state.searchRequestState = .initial
+        state.searchState = .cancelled
+        state.errorState = .error(message)
         state.pages = Pages<BookModel>()
-        state.selectedBook = .unselected
+        state.selectedBookState = .unselected
     case .showDetail(let bookDetail):
-        state.bookDetailResponseState = .loaded(bookDetail)
-        state.selectedBook = .unselected
-        state.error = .none
+        state.bookDetailState = .loaded(bookDetail)
+        state.selectedBookState = .unselected
+        state.errorState = .none
     case .selectBook(let book):
-        state.selectedBook = .selected(book)
-        state.bookDetailResponseState = .loading
-        state.error = .none
+        state.selectedBookState = .selected(book)
+        state.bookDetailState = .loading
+        state.errorState = .none
     case .clearDetail:
-        state.bookDetailResponseState = .initial
+        state.bookDetailState = .initial
     default:
         break
     }
