@@ -9,7 +9,7 @@ language: objective-c
 # before_install:
 # - gem install cocoapods # Since Travis is not always on latest version
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace BookFinder.xcworkspace -scheme BookFinderTests -destination 'platform=iOS Simulator, OS=13.5' ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace BookFinder.xcworkspace -scheme BookFinderTests -destination platform\=iOS\ Simulator,OS\=13.5,name\=iPhone\ 11 build test | bundle exec xcpretty -c
 
 before_install:
 - sudo gem install cocoapods
