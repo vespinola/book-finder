@@ -12,6 +12,13 @@ import Foundation
 struct SearchResponseModel: Codable {
     let error, total, page: String?
     let books: [BookModel]?
+    
+    init(books: [BookModel], total: String) {
+        self.books = books
+        self.error = nil
+        self.total = total
+        self.page = nil
+    }
 }
 
 // MARK: - Book

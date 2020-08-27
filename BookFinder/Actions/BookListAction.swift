@@ -13,7 +13,7 @@ import ReSwiftThunk
 let getMoreBooks = Thunk<AppState> { dispatch, getState in
     guard let state = getState() else { return }
     
-    guard case .searching(let query) = state.bookListState.search else { return }
+    guard case .searching(let query) = state.bookListState.searchState else { return }
     let service: BookServiceProtocol = BookService()
     
     let nextPage = state.bookListState.pages.currentPage + 1
@@ -32,7 +32,7 @@ let getMoreBooks = Thunk<AppState> { dispatch, getState in
 let getNewBooks = Thunk<AppState> { dispatch, getState in
     guard let state = getState() else { return }
     
-    let searchState = state.bookListState.search
+    let searchState = state.bookListState.searchState
     
     switch searchState {
     case .ready, .cancelled:
@@ -56,7 +56,7 @@ let getNewBooks = Thunk<AppState> { dispatch, getState in
 let getDetail = Thunk<AppState> { dispatch, getState in
     guard let state = getState() else { return }
     
-    guard case .selected(let selectBook) = state.bookListState.selectedBook else { return }
+    guard case .selected(let selectBook) = state.bookListState.selectedBookState else { return }
     let service: BookServiceProtocol = BookService()
 
     service.getBook(by: selectBook.isbn13 ?? "" , onSuccess: { response in
