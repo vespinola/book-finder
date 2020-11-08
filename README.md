@@ -13,6 +13,9 @@ The project was created with the purpose of testing ReSwift, based on **[ReduxMo
 - Run **pod install**
 - Open **BookFinder.xcworkspace**
 
+## Contributions
+Thanks **[Fernando Rodas](https://github.com/fvrodas)** for making the app icon
+
 ## Author
 
 * **[Vladimir Espinola Lezcano](https://www.linkedin.com/in/vladimir-espinola-lezcano-012464a2/)**
