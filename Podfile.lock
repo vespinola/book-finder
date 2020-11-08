@@ -1,0 +1,48 @@
+PODS:
+  - Alamofire (5.4.0)
+  - Nuke (9.1.2)
+  - R.swift (5.3.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - ReSwift (5.0.0)
+  - ReSwiftThunk (1.2.0):
+    - ReSwift (~> 5.0)
+    - ReSwiftThunk/Core (= 1.2.0)
+  - ReSwiftThunk/Core (1.2.0):
+    - ReSwift (~> 5.0)
+  - SnapKit (5.0.1)
+  - Sniffer (2.1.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.2)
+  - Nuke
+  - R.swift
+  - ReSwift (~> 5.0)
+  - ReSwiftThunk
+  - SnapKit
+  - Sniffer (~> 2.1)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Nuke
+    - R.swift
+    - R.swift.Library
+    - ReSwift
+    - ReSwiftThunk
+    - SnapKit
+    - Sniffer
+
+SPEC CHECKSUMS:
+  Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  Nuke: dd2e6be6a34c042a7861e190632781d11f253026
+  R.swift: 4170fb7161c67be3bc1a847040b79367d69c419f
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  ReSwift: 628f1a9b3ee52e3b3ca2a644435472fd77afafe1
+  ReSwiftThunk: 23c8ea9092d9dc94b72005f19352dbd37fa42533
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Sniffer: 412603cb61cab0a7d374ffa771e295b9a78e0663
+
+PODFILE CHECKSUM: fc359c2ba037f10c3a5138ae317d62600d0f3ddd
+
+COCOAPODS: 1.10.0
